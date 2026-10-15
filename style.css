@@ -282,3 +282,28 @@ tbody tr:hover {
     background: transparent;
   }
 }
+.qr-card {
+  align-items: center;
+  text-align: center;
+}
+
+.qr-subtitle {
+  color: var(--text-sub);
+  margin-top: 0.4rem;
+}
+
+.qr-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(11, 16, 38, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+#qrcode {
+  padding: 0.8rem;
+  background: white;
+  border-radius: 10px;
+}

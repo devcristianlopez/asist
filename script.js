@@ -192,3 +192,16 @@ function guardarRegistros() {
     console.warn("No se pudieron guardar los registros", error);
   }
 }
+document.addEventListener('DOMContentLoaded', function () {
+  const qrcodeElement = document.getElementById('qrcode');
+  if (qrcodeElement && typeof QRCode !== 'undefined') {
+    new QRCode(qrcodeElement, {
+      text: 'https://devcristianlopez.github.io/asist/',
+      width: 200,
+      height: 200,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+});

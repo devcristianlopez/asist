@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
@@ -53,6 +54,16 @@
       </div>
 
       <p class="empty-state" id="emptyState">Aún no hay registros de asistencia.</p>
+    </section>
+
+    <section class="card qr-card">
+      <div class="card-header">
+        <h2>Escanea para acceder desde tu móvil</h2>
+        <p class="qr-subtitle">https://devcristianlopez.github.io/asist/</p>
+      </div>
+      <div class="qr-wrapper">
+        <div id="qrcode"></div>
+      </div>
     </section>
   </main>
 
