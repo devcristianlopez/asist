@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Asistencia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Registro de Asistencia</h1>
+      <p>Ingresa tu nombre completo para marcar tu asistencia</p>
+    </header>
+
+    <section class="card">
+      <form id="formAsistencia" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="off" required>
+          <small class="error" id="errorNombre" aria-live="polite"></small>
+        </div>
+        <button type="submit" class="btn-primary">Marcar asistencia</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Lista de asistentes</h2>
+        <div class="actions">
+          <button type="button" id="btnDescargar" class="btn-secondary">Descargar CSV</button>
+          <button type="button" id="btnLimpiar" class="btn-danger">Limpiar lista</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="tablaAsistentes">
+          <thead>
+            <tr>
+              <th class="col-num">#</th>
+              <th>Nombre</th>
+              <th class="col-fecha">Fecha</th>
+              <th class="col-hora">Hora</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <p class="empty-state" id="emptyState">Aún no hay registros de asistencia.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Datos guardados solo en este navegador hasta que descargues el CSV.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
