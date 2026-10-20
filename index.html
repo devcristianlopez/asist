@@ -4,74 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Asistencia</title>
+  <title>Registro de Asistencia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <meta http-equiv="refresh" content="0; url=https://demo.lanedu.cl/">
 </head>
 
 <body>
   <main class="container">
     <header class="header">
       <h1>Registro de Asistencia</h1>
-      <p>Ingresa tu nombre completo para marcar tu asistencia</p>
+      <p>Redirigiendo al formulario compartido...</p>
     </header>
-
-    <section class="card">
-      <form id="formAsistencia" novalidate>
-        <div class="form-group">
-          <label for="nombre">Nombre completo</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autocomplete="off" required>
-          <small class="error" id="errorNombre" aria-live="polite"></small>
-        </div>
-        <button type="submit" class="btn-primary">Marcar asistencia</button>
-      </form>
-    </section>
-
-    <section class="card">
-      <div class="card-header">
-        <h2>Lista de asistentes</h2>
-        <div class="actions">
-          <button type="button" id="btnDescargar" class="btn-secondary">Descargar CSV</button>
-          <button type="button" id="btnLimpiar" class="btn-danger">Limpiar lista</button>
-        </div>
-      </div>
-
-      <div class="table-wrapper">
-        <table id="tablaAsistentes">
-          <thead>
-            <tr>
-              <th class="col-num">#</th>
-              <th>Nombre</th>
-              <th class="col-fecha">Fecha</th>
-              <th class="col-hora">Hora</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-
-      <p class="empty-state" id="emptyState">Aún no hay registros de asistencia.</p>
-    </section>
-
     <section class="card qr-card">
       <div class="card-header">
-        <h2>Escanea para acceder desde tu móvil</h2>
-        <p class="qr-subtitle">https://devcristianlopez.github.io/asist/</p>
+        <h2>Escanea el QR para acceder</h2>
+        <p class="qr-subtitle">https://demo.lanedu.cl/</p>
       </div>
       <div class="qr-wrapper">
-        <div id="qrcode"></div>
+        <img id="qrImg" alt="QR" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fdemo.lanedu.cl%2F" />
       </div>
+      <p class="qr-help">La aplicación corre en el servidor compartido. Los datos se guardan ahí.</p>
     </section>
   </main>
-
-  <footer class="footer">
-    <small>Datos guardados solo en este navegador hasta que descargues el CSV.</small>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="footer"><small>Si no redirige automáticamente, <a href="https://demo.lanedu.cl/" style="color:var(--primary);">haz clic aquí</a>.</small></footer>
 </body>
-
 </html>
